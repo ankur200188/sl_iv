@@ -1,0 +1,85 @@
+.send-welcome{
+    margin: 10px 0;
+}
+.employee-filter{
+    margin: 10px 0;
+    div.selected-value{
+        padding: 10px 15px;
+        background: #ddd;
+        margin: 10px 0;
+        position: relative;
+        cursor: pointer;
+        border-radius: 4px;
+        &:after{
+            content: "\25BE";
+            position: absolute;
+            right: 15px;
+            transform: translateY(0);
+            font-size: 20px;
+            top: 6px;
+        }
+        &.active{
+            border: 1px solid #00bfff;
+            background: #fff;
+            box-shadow: 0 1px 2px #00bfff;
+            &+ ul, &+ .select-employee{
+                display: block;
+            }
+            &:after{
+                transform: rotate(180deg);
+            }
+        }
+    }
+    label{
+        font-weight: bold;
+        margin-top: 10px;
+    }
+    .team-selector, .employee-selector{
+        position: relative;
+        .select-employee{
+            ul{
+                margin: 0;
+                padding: 0;
+                list-style: none outside none;
+                li{
+                    padding: 10px;
+                    text-shadow: 0 -1px 0 #ccc;
+                    &:hover{
+                        cursor: pointer;
+                        background: #efefef;
+                    }
+                }
+            }
+            input{
+                width: 100%;
+                padding: 7px 4px;
+                border-radius: 2px;
+                border: 1px solid #ddd;
+                font-size: 14px;
+            }
+        }
+        > ul, .select-employee{
+            display: none;
+            position: absolute;
+            z-index: 99;
+            background: #fff;
+            width: 100%;
+            margin: 0;
+            list-style: none outside none;
+            border: 1px solid #ddd;
+            top: 40px;
+            left: 0;
+            padding: 10px;
+            box-shadow: 0 1px 2px #888;
+            li{
+                padding: 10px;
+                text-shadow: 0 -1px 0 #ccc;
+                &:hover{
+                    cursor: pointer;
+                    background: #efefef;
+                }
+            }
+        }
+
+    }
+}
